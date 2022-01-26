@@ -28,17 +28,38 @@ class _MyAppState extends State<MyApp> {
             children: [
               Text('You have pushed the button this many times.'),
               Text('$counter', style: Theme.of(context).textTheme.bodyText1),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FloatingActionButton(
+                      child: Icon(Icons.add),
+                      onPressed: () {
+                        setState(() {
+                          counter++;
+                          print("$counter");
+                        });
+                      }),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  FloatingActionButton(
+                      child: Icon(Icons.remove),
+                      onPressed: () {
+                        setState(() {
+                          if (counter > 0) {
+                            counter--;
+                            print("$counter");
+                          }
+                        });
+                      }),
+                ],
+              ),
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
-            onPressed: () {
-              setState(() {
-                counter++;
-                print("$counter");
-              });
-            }),
       ),
     );
   }

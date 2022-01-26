@@ -46,8 +46,7 @@ class _DiceState extends State<Dice> {
                       leftDice = Random().nextInt(6) + 1;
                       rightDice = Random().nextInt(6) + 1;
                     });
-                    showToast(
-                        "Left dice: {$leftDice}, Right dice: {$rightDice}");
+                    showToast("Left dice: $leftDice, Right dice: $rightDice");
                   },
                   style: ElevatedButton.styleFrom(primary: Colors.orangeAccent),
                 ),

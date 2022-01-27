@@ -5,7 +5,7 @@ class ScreenC extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Page'),
+        title: Text('Third Page'),
       ),
       body: Center(
         child: Column(
